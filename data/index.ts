@@ -126,6 +126,22 @@ export const projects = [
     ],
     link: "https://suryagita.com",
   },
+  {
+    id: 5,
+    title: "MebelShop - Furniture E-commerce Platform",
+    des: "A comprehensive furniture e-commerce platform designed to enhance the online shopping experience.",
+    img: "/p5_final.svg",
+    iconLists: ["/ts.svg", "/next.svg", "/tail.svg", "/git.svg"],
+    link: "https://my-mebelshop.netlify.app/",
+  },
+  {
+    id: 6,
+    title: "HooBank - Financial Services App",
+    des: "A comprehensive financial services app designed to streamline banking operations and enhance user experience.",
+    img: "/p6_final.svg",
+    iconLists: ["/ts.svg", "/next.svg", "/tail.svg", "/git.svg"],
+    link: "https://tds-modern-bank.netlify.app/",
+  },
 ];
 
 export const testimonials = [
