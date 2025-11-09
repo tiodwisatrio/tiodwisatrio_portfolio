@@ -250,7 +250,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/insta.svg",
-    link: "https://www.instagram.com/tiodwisatrio/",
+    link: "https://www.instagram.com/tiodwisatrio_/",
   },
   {
     id: 3,
