@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-image.png", // You'll need to create this
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Tio Dwi Satrio - Full Stack Developer",
@@ -103,9 +103,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    logo: "/fav_logo_tio.png",
     name: "Tio Dwi Satrio",
     url: "https://tiodwisatrio.com",
-    image: "https://tiodwisatrio.com/profile.svg",
+    image: "https://tiodwisatrio.com/logo_tio.png",
     sameAs: [
       "https://github.com/tiodwisatrio",
       "https://www.linkedin.com/in/tio-dwi-satrio-a91153177/",
@@ -192,6 +193,8 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo_tio.png" sizes="any" />
+        <link rel="icon" href="/fav_logo_tio.png" type="image/x-icon" />
+
         <link rel="apple-touch-icon" href="/logo_tio.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
