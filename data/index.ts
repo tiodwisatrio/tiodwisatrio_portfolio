@@ -83,6 +83,30 @@ export const projects = [
       "/livewire.svg",
     ],
     link: "https://stiego.co.id",
+    slug: "stiego-fashion-store",
+    category: "E-commerce",
+    year: "2023",
+    fullDescription:
+      "Stiego is a comprehensive online fashion store that provides a seamless shopping experience for fashion enthusiasts. Built with modern web technologies, the platform offers a wide range of fashion products with an intuitive user interface.",
+    features: [
+      "User-friendly product catalog with advanced filtering",
+      "Secure payment gateway integration",
+      "Real-time inventory management",
+      "Shopping cart and wishlist functionality",
+      "Order tracking system",
+      "Responsive design for all devices",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+    ],
+    challenges:
+      "Creating a scalable e-commerce platform that handles high traffic while maintaining fast load times and secure transactions.",
+    solution:
+      "Implemented Laravel's built-in caching mechanisms and optimized database queries. Used Livewire for dynamic interactions without page reloads.",
   },
   {
     id: 2,
@@ -97,6 +121,30 @@ export const projects = [
       "/prisma.svg",
     ],
     link: "https://elysianhotel.vercel.app",
+    slug: "elysian-hotel-booking",
+    category: "Booking Platform",
+    year: "2024",
+    fullDescription:
+      "Elysian is a modern hotel booking platform designed to simplify the reservation process for both hotels and guests. The platform features real-time availability, secure payment processing, and an intuitive booking experience.",
+    features: [
+      "Real-time room availability checking",
+      "Advanced search with filters (location, price, amenities)",
+      "Secure booking and payment system",
+      "User authentication and profile management",
+      "Booking history and management",
+      "Admin dashboard for hotel management",
+    ],
+    technologies: [
+      { name: "Next.js", icon: "/next.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "TypeScript", icon: "/ts.svg" },
+      { name: "PostgreSQL", icon: "/postgree.svg" },
+      { name: "Prisma", icon: "/prisma.svg" },
+    ],
+    challenges:
+      "Managing real-time room availability and preventing double bookings while ensuring fast performance.",
+    solution:
+      "Implemented database transactions with Prisma and used Next.js ISR for optimal performance. Added real-time validation and reservation locking mechanisms.",
   },
   {
     id: 3,
@@ -111,6 +159,30 @@ export const projects = [
       "/laravel.svg",
     ],
     link: "https://soraview.id",
+    slug: "soraview-smart-tv",
+    category: "Entertainment",
+    year: "2023",
+    fullDescription:
+      "Soraview is an innovative smart TV application designed specifically for hotels. It provides guests with an interactive entertainment experience, offering streaming services, hotel information, and room service integration.",
+    features: [
+      "Streaming service integration",
+      "Hotel information and services",
+      "Room service ordering",
+      "Multi-language support",
+      "Content management system for hotels",
+      "Usage analytics and reporting",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Bootstrap", icon: "/bootstrap.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+    ],
+    challenges:
+      "Creating a TV-optimized interface that works across different smart TV platforms and screen sizes.",
+    solution:
+      "Developed a responsive interface optimized for TV screens with remote control navigation. Implemented a flexible architecture supporting multiple TV platforms.",
   },
   {
     id: 4,
@@ -125,6 +197,30 @@ export const projects = [
       "/laravel.svg",
     ],
     link: "https://suryagita.com",
+    slug: "sn-cargo-logistics",
+    category: "Logistics",
+    year: "2023",
+    fullDescription:
+      "SN Cargo is a comprehensive logistics management system that helps streamline shipping operations, track deliveries, and manage inventory. The platform provides real-time tracking and automated workflows for efficient logistics management.",
+    features: [
+      "Real-time shipment tracking",
+      "Automated dispatch and routing",
+      "Inventory management",
+      "Customer portal for tracking",
+      "Invoice generation and billing",
+      "Analytics and reporting dashboard",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Bootstrap", icon: "/bootstrap.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+    ],
+    challenges:
+      "Managing complex logistics workflows and ensuring real-time tracking accuracy across multiple delivery points.",
+    solution:
+      "Implemented event-driven architecture with real-time updates. Created automated workflows using Laravel queues and scheduled tasks.",
   },
   {
     id: 5,
@@ -133,6 +229,29 @@ export const projects = [
     img: "/p5_final.svg",
     iconLists: ["/ts.svg", "/next.svg", "/tail.svg", "/git.svg"],
     link: "https://my-mebelshop.netlify.app/",
+    slug: "mebelshop-furniture",
+    category: "E-commerce",
+    year: "2024",
+    fullDescription:
+      "MebelShop is a modern furniture e-commerce platform that offers a comprehensive shopping experience for furniture enthusiasts. The platform features high-quality product images, detailed specifications, and an intuitive purchase flow.",
+    features: [
+      "Interactive product gallery with zoom",
+      "3D product visualization",
+      "Advanced product filtering and search",
+      "Shopping cart with save for later",
+      "Multiple payment options",
+      "Delivery scheduling system",
+    ],
+    technologies: [
+      { name: "TypeScript", icon: "/ts.svg" },
+      { name: "Next.js", icon: "/next.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "Git", icon: "/git.svg" },
+    ],
+    challenges:
+      "Displaying large furniture images efficiently while maintaining fast load times and providing an engaging user experience.",
+    solution:
+      "Implemented Next.js Image optimization with lazy loading. Used modern image formats (WebP) and responsive images for different screen sizes.",
   },
   {
     id: 6,
@@ -141,6 +260,29 @@ export const projects = [
     img: "/p6_final.svg",
     iconLists: ["/ts.svg", "/next.svg", "/tail.svg", "/git.svg"],
     link: "https://tds-modern-bank.netlify.app/",
+    slug: "hoobank-financial-services",
+    category: "Finance",
+    year: "2024",
+    fullDescription:
+      "HooBank is a modern financial services application that provides users with a comprehensive banking experience. The platform offers account management, transaction tracking, and various financial services through an intuitive interface.",
+    features: [
+      "Account management dashboard",
+      "Transaction history and analytics",
+      "Money transfer functionality",
+      "Bill payment integration",
+      "Financial insights and reports",
+      "Secure authentication system",
+    ],
+    technologies: [
+      { name: "TypeScript", icon: "/ts.svg" },
+      { name: "Next.js", icon: "/next.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "Git", icon: "/git.svg" },
+    ],
+    challenges:
+      "Creating a secure and user-friendly financial interface while ensuring data protection and regulatory compliance.",
+    solution:
+      "Implemented industry-standard security practices including encryption, secure authentication, and session management. Created an intuitive UI that simplifies complex financial operations.",
   },
 ];
 
