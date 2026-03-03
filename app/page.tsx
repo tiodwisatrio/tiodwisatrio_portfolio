@@ -22,6 +22,10 @@ const RecentProjects = dynamic(() => import("@/components/RecentProjects"), {
   ssr: false,
   loading: () => <div className="py-20 h-screen" />,
 });
+const ContactForm = dynamic(() => import("@/components/ContactForm"), {
+  ssr: false,
+  loading: () => <div className="py-20 h-screen" />,
+});
 
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
@@ -36,6 +40,7 @@ export default function Home() {
         {/* <Clients /> */}
         <Experience />
         <Approach />
+        <ContactForm />
         <Footer />
       </div>
     </main>
