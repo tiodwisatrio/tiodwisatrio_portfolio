@@ -10,8 +10,7 @@ export default function NotFound() {
           Project Not Found
         </h2>
         <p className="text-white-100/60 mb-8 max-w-md mx-auto">
-          Sorry, the project you&apos;re looking for doesn&apos;t exist or has
-          been moved.
+          Sorry, the project you&apos;re looking for doesn&apos;t exist.
         </p>
         <Link
           href="/#projects"
