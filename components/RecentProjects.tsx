@@ -38,84 +38,79 @@ const RecentProjects = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Link href={`/projects/${item.slug}`} className="w-full h-full">
-                <PinContainer
-                  title={item.title}
-                  href={`/projects/${item.slug}`}
-                >
-                  {/* Card image */}
-                  <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                    <div
-                      className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                      style={{ backgroundColor: "#13162D" }}
-                    >
-                      <Image
-                        src="/bg.png"
-                        alt="Background image"
-                        fill
-                        className="object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-
+              <PinContainer title={item.title} href={`/projects/${item.slug}`}>
+                {/* Card image */}
+                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                  <div
+                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                    style={{ backgroundColor: "#13162D" }}
+                  >
                     <Image
-                      src={item.img}
-                      alt={`${item.title} project cover`}
-                      className="z-10 absolute bottom-0"
-                      width={400}
-                      height={300}
+                      src="/bg.png"
+                      alt="Background image"
+                      fill
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
 
-                  {/* Title */}
-                  <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                    {item.title}
-                  </h1>
+                  <Image
+                    src={item.img}
+                    alt={`${item.title} project cover`}
+                    className="z-10 absolute bottom-0"
+                    width={400}
+                    height={300}
+                    loading="lazy"
+                  />
+                </div>
 
-                  {/* Description */}
-                  <p
-                    className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                    style={{ color: "#BEC1DD", margin: "1vh 0" }}
-                  >
-                    {item.des}
-                  </p>
+                {/* Title */}
+                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                  {item.title}
+                </h1>
 
-                  {/* Icons & link */}
-                  <div className="flex items-center justify-between mt-7 mb-3">
-                    <div className="flex items-center">
-                      {item.iconLists &&
-                        Array.isArray(item.iconLists) &&
-                        item.iconLists.length > 0 &&
-                        item.iconLists.map((icon, index) => (
-                          <div
-                            key={index}
-                            className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                            style={{
-                              transform: `translateX(-${5 * index + 2}px)`,
-                            }}
-                          >
-                            <Image
-                              src={icon}
-                              alt="Technology icon"
-                              className="p-2"
-                              width={32}
-                              height={32}
-                              loading="lazy"
-                            />
-                          </div>
-                        ))}
-                    </div>
+                {/* Description */}
+                <p
+                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                  style={{ color: "#BEC1DD", margin: "1vh 0" }}
+                >
+                  {item.des}
+                </p>
 
-                    <div className="flex justify-center items-center">
-                      <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                        View Details
-                      </p>
-                      <FaLocationArrow className="ms-3" color="#CBACF9" />
-                    </div>
+                {/* Icons & link */}
+                <div className="flex items-center justify-between mt-7 mb-3">
+                  <div className="flex items-center">
+                    {item.iconLists &&
+                      Array.isArray(item.iconLists) &&
+                      item.iconLists.length > 0 &&
+                      item.iconLists.map((icon, index) => (
+                        <div
+                          key={index}
+                          className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                          style={{
+                            transform: `translateX(-${5 * index + 2}px)`,
+                          }}
+                        >
+                          <Image
+                            src={icon}
+                            alt="Technology icon"
+                            className="p-2"
+                            width={32}
+                            height={32}
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
                   </div>
-                </PinContainer>
-              </Link>
+
+                  <div className="flex justify-center items-center">
+                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                      View Details
+                    </p>
+                    <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  </div>
+                </div>
+              </PinContainer>
             </motion.div>
           ))}
       </div>
