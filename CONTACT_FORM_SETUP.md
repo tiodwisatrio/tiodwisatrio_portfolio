@@ -171,17 +171,98 @@ from: "Your Name <onboarding@resend.dev>", // Change this
 
 ## 🎯 Production Deployment
 
-### For Vercel:
+### For Vercel (Detailed Steps):
 
-1. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
-2. Add: `RESEND_API_KEY` = `your_key_here`
-3. Redeploy
+**❗ WAJIB: Sebelum deploy, pastikan API key sudah di-set di Vercel!**
+
+#### Method 1: Via Vercel Dashboard (Recommended)
+
+1. **Login ke Vercel:**
+   - Go to [https://vercel.com](https://vercel.com)
+   - Login dengan GitHub account
+
+2. **Select Your Project:**
+   - Click project name (tio-next-portfolio)
+   - Click "Settings" tab
+
+3. **Add Environment Variable:**
+   - Click "Environment Variables" di sidebar
+   - Click "Add New"
+   - Name: `RESEND_API_KEY`
+   - Value: Paste your Resend API key (re\_...)
+   - Select Environment: Production, Preview, Development (pilih semua)
+   - Click "Save"
+
+4. **Redeploy:**
+   - Go to "Deployments" tab
+   - Click "..." pada latest deployment
+   - Click "Redeploy"
+   - Tunggu sampai build success
+
+#### Method 2: Via Vercel CLI
+
+```bash
+# Install Vercel CLI (if not installed)
+npm i -g vercel
+
+# Login
+vercel login
+
+# Add environment variable
+vercel env add RESEND_API_KEY
+
+# Paste your API key when prompted
+# Select: Production, Preview, Development
+
+# Redeploy
+vercel --prod
+```
+
+#### Verify Deployment:
+
+1. Open your live site: `https://yourdomain.com`
+2. Test contact form
+3. Submit test message
+4. Check email: `tiodwisatrio27@gmail.com`
 
 ### For Netlify:
 
 1. Go to Site Settings → Environment → Edit Variables
 2. Add: `RESEND_API_KEY` = `your_key_here`
 3. Redeploy
+
+---
+
+## 🐛 Deployment Troubleshooting
+
+### Error: "Missing API key" during build
+
+**Cause:** RESEND_API_KEY not set in Vercel environment variables
+
+**Solution:**
+
+1. Add API key to Vercel (see steps above)
+2. Redeploy
+
+### Build succeeds but form doesn't work
+
+**Checklist:**
+
+- ✅ API key added to Vercel environment variables
+- ✅ Selected "Production" environment when adding key
+- ✅ Redeployed after adding environment variable
+- ✅ Check Vercel deployment logs for errors
+
+### Form works in dev but not production
+
+1. Check Vercel Function logs:
+   - Go to Vercel Dashboard → Deployments
+   - Click latest deployment → Functions
+   - Check `/api/contact` logs for errors
+
+2. Verify environment variable:
+   - Settings → Environment Variables
+   - Ensure RESEND_API_KEY is set for Production
 
 ---
 

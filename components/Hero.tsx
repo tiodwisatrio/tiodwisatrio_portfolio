@@ -41,7 +41,7 @@ const Hero = memo(() => {
       <div className="flex justify-center relative my-16 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-[10px] md:text-xs text-center text-blue-100 max-w-96">
-            A Fullstack Developer based in Indonesia👨‍💻
+            A Fullstack Web Developer based in Indonesia👨‍💻
           </p>
           <TextGenerateEffect
             words="Turning Coffee and Chaos Into Real-World Web Solutions"

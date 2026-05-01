@@ -72,6 +72,44 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "Sektor 21 - Roastery Coffee",
+    des: "A modern company profile website for a specialty coffee roastery, showcasing their story, roast beans, and coffee culture.",
+    img: "/p_sektor.svg",
+    iconLists: [
+      "/php.svg",
+      "/laravel.svg",
+      "/tail.svg",
+      "/mysql.svg",
+      "/livewire.svg",
+    ],
+    link: "https://companyprojectsector21.com",
+    slug: "sektor21-roastery-coffee",
+    category: "Company Profile",
+    year: "2026",
+    fullDescription:
+      "Sektor 21 is a specialty coffee roastery company profile website that brings the brand's story and passion for coffee to life online. The platform highlights their roasting process, signature blends, coffee menu, and the warm ambiance of the roastery — crafted to attract coffee enthusiasts and potential wholesale partners.",
+    features: [
+      "Elegant company profile website showcasing brand identity and story",
+      "Interactive coffee menu with product details and descriptions",
+      "Behind-the-scenes roasting process section",
+      "Gallery of roastery ambiance and coffee products",
+      "Contact form for wholesale and partnership inquiries",
+      "Fully responsive design optimized for all devices",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+    ],
+    challenges:
+      "Translating the warm, artisanal identity of a specialty coffee roastery into a compelling digital experience while keeping the website fast and visually rich.",
+    solution:
+      "Designed a visually immersive layout using Tailwind CSS with custom typography and earthy color palettes. Used Livewire for smooth dynamic interactions and Laravel for managing content and contact form submissions efficiently.",
+  },
+  {
+    id: 2,
     title: "Stiego - Online Fashion Store",
     des: "An e-commerce platform offering a seamless shopping experience for fashion enthusiasts.",
     img: "/p1_final.svg",
@@ -85,7 +123,7 @@ export const projects = [
     link: "https://stiego.co.id",
     slug: "stiego-fashion-store",
     category: "E-commerce",
-    year: "2023",
+    year: "2025",
     fullDescription:
       "Stiego is a comprehensive online fashion store that provides a seamless shopping experience for fashion enthusiasts. Built with modern web technologies, the platform offers a wide range of fashion products with an intuitive user interface.",
     features: [
@@ -109,7 +147,7 @@ export const projects = [
       "Implemented Laravel's built-in caching mechanisms and optimized database queries. Used Livewire for dynamic interactions without page reloads.",
   },
   {
-    id: 2,
+    id: 3,
     title: "Elysian - Hotel Booking Platform",
     des: "Simplify your hotel booking experience with Elysian. Seamlessly connect with hotels and guests.",
     img: "/p2_final.svg",
@@ -147,7 +185,7 @@ export const projects = [
       "Implemented database transactions with Prisma and used Next.js ISR for optimal performance. Added real-time validation and reservation locking mechanisms.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Soraview - Smart TV Application",
     des: "A smart TV application designed for hotels, providing guests with an interactive entertainment experience.",
     img: "/p3_final.svg",
@@ -185,7 +223,7 @@ export const projects = [
       "Developed a responsive interface optimized for TV screens with remote control navigation. Implemented a flexible architecture supporting multiple TV platforms.",
   },
   {
-    id: 4,
+    id: 5,
     title: "SN Cargo - Logistics Management System",
     des: "A comprehensive logistics management system designed to streamline operations and enhance efficiency.",
     img: "/p4_final.svg",
@@ -223,8 +261,8 @@ export const projects = [
       "Implemented event-driven architecture with real-time updates. Created automated workflows using Laravel queues and scheduled tasks.",
   },
   {
-    id: 5,
-    title: "PPID - Public Information Management System",
+    id: 6,
+    title: "PPID - Poltekkes Kemenkes Surakarta",
     des: "A public information management system designed to facilitate transparency and efficient information dissemination.",
     img: "/p7_final.svg",
     iconLists: [
@@ -261,7 +299,7 @@ export const projects = [
       "Implemented a robust request management system with automated workflows. Used Laravel's built-in security features to protect sensitive information and ensure compliance with data protection regulations.",
   },
   {
-    id: 6,
+    id: 7,
     title: "BKD Jateng - Employee Management System",
     des: "An employee management system designed to streamline HR operations and enhance organizational efficiency.",
     img: "/p8_final.svg",
@@ -299,7 +337,7 @@ export const projects = [
       "Implemented robust security measures including encryption and access controls. Designed an intuitive interface that simplifies complex HR tasks and improves overall efficiency.",
   },
   {
-    id: 7,
+    id: 8,
     title: "MebelShop - Furniture E-commerce Platform",
     des: "A comprehensive furniture e-commerce platform designed to enhance the online shopping experience.",
     img: "/p5_final.svg",
@@ -330,7 +368,7 @@ export const projects = [
       "Implemented Next.js Image optimization with lazy loading. Used modern image formats (WebP) and responsive images for different screen sizes.",
   },
   {
-    id: 8,
+    id: 9,
     title: "HooBank - Financial Services App",
     des: "A comprehensive financial services app designed to streamline banking operations and enhance user experience.",
     img: "/p6_final.svg",
@@ -438,16 +476,16 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Development",
-    desc: "Created responsive and user-friendly mobile applications for both iOS and Android platforms.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "SEO Optimization",
+    desc: "Improve website visibility on search engines through on-page optimization, keyword research, and performance tuning.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "UI/UX Design",
     desc: "Designed intuitive and visually appealing user interfaces to enhance user experience.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {

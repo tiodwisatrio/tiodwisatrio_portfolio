@@ -1,7 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { motion } from "framer-motion";
@@ -25,13 +24,13 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </motion.h1>
 
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mt-10 px-4 justify-items-center">
         {projects &&
           Array.isArray(projects) &&
           projects.length > 0 &&
           projects.map((item, i) => (
             <motion.div
-              className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+              className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center w-full max-w-sm"
               key={item.id}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
