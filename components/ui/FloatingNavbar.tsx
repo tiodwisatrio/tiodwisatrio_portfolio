@@ -7,8 +7,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import { HiSun, HiMoon } from "react-icons/hi";
 import { cn } from "@/lib/utils";
 
 export const FloatingNav = ({
@@ -23,7 +21,6 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-  const { theme, setTheme } = useTheme();
 
   // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
@@ -73,13 +70,7 @@ export const FloatingNav = ({
           </Link>
         ))}
 
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="ml-2 w-8 h-8 flex items-center justify-center rounded-full border border-white/20 dark:text-yellow-300 text-slate-700 hover:bg-white/10 transition-colors duration-300"
-          aria-label="Toggle theme"
-        >
-          {theme === "dark" ? <HiSun size={16} /> : <HiMoon size={16} />}
-        </button>
+
       </motion.div>
     </AnimatePresence>
   );
