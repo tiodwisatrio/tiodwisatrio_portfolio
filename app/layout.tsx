@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "Professional Full Stack Developer building modern web applications with Next.js, React, and TypeScript. Transforming ideas into awesome digital products.",
     url: "https://tiodwisatrio.com",
-    siteName: "Tio Dwi Satrio Portfolio",
+    siteName: "Tio Dwi Satrio",
     type: "website",
     locale: "en_US",
     images: [
