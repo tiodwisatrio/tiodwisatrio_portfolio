@@ -159,7 +159,7 @@ export const projects = [
       "/mysql.svg",
       "/livewire.svg",
     ],
-    link: "https://jtrental.web.id",
+    link: "https://jogjatriprental.web.id",
     slug: "jtrental-vehicle-rental",
     category: "E-commerce",
     year: "2025",
