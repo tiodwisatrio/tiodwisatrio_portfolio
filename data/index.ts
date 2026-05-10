@@ -338,44 +338,44 @@ export const projects = [
     solution:
       "Implemented a robust request management system with automated workflows. Used Laravel's built-in security features to protect sensitive information and ensure compliance with data protection regulations.",
   },
-  // {
-  //   id: 7,
-  //   title: "BKD Jateng - Employee Management System",
-  //   des: "An employee management system designed to streamline HR operations and enhance organizational efficiency.",
-  //   img: "/p8_final.svg",
-  //   iconLists: [
-  //     "/php.svg",
-  //     "/bootstrap.svg",
-  //     "/mysql.svg",
-  //     "/livewire.svg",
-  //     "/laravel.svg",
-  //   ],
-  //   link: "https://bkd.jatengprov.go.id",
-  //   slug: "bkd-jateng-employee-management",
-  //   category: "HR Management",
-  //   year: "2023",
-  //   fullDescription:
-  //     "The BKD Jateng Employee Management System is a comprehensive platform designed to streamline HR operations and enhance organizational efficiency. The system provides tools for employee data management, attendance tracking, and performance evaluation.",
-  //   features: [
-  //     "Employee database with detailed profiles",
-  //     "Attendance tracking and leave management",
-  //     "Performance evaluation and feedback system",
-  //     "Role-based access control for HR staff",
-  //     "Automated report generation for HR metrics",
-  //     "Integration with payroll and benefits systems",
-  //   ],
-  //   technologies: [
-  //     { name: "PHP", icon: "/php.svg" },
-  //     { name: "Bootstrap", icon: "/bootstrap.svg" },
-  //     { name: "MySQL", icon: "/mysql.svg" },
-  //     { name: "Livewire", icon: "/livewire.svg" },
-  //     { name: "Laravel", icon: "/laravel.svg" },
-  //   ],
-  //   challenges:
-  //     "Managing sensitive employee data securely while providing an efficient and user-friendly interface for HR staff.",
-  //   solution:
-  //     "Implemented robust security measures including encryption and access controls. Designed an intuitive interface that simplifies complex HR tasks and improves overall efficiency.",
-  // },
+  {
+    id: 7,
+    title: "BKD Jateng - Employee Management System",
+    des: "An employee management system designed to streamline HR operations and enhance organizational efficiency.",
+    img: "/p8_final.svg",
+    iconLists: [
+      "/php.svg",
+      "/bootstrap.svg",
+      "/mysql.svg",
+      "/livewire.svg",
+      "/laravel.svg",
+    ],
+    link: "https://bkd.jatengprov.go.id",
+    slug: "bkd-jateng-employee-management",
+    category: "HR Management",
+    year: "2023",
+    fullDescription:
+      "The BKD Jateng Employee Management System is a comprehensive platform designed to streamline HR operations and enhance organizational efficiency. The system provides tools for employee data management, attendance tracking, and performance evaluation.",
+    features: [
+      "Employee database with detailed profiles",
+      "Attendance tracking and leave management",
+      "Performance evaluation and feedback system",
+      "Role-based access control for HR staff",
+      "Automated report generation for HR metrics",
+      "Integration with payroll and benefits systems",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Bootstrap", icon: "/bootstrap.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+    ],
+    challenges:
+      "Managing sensitive employee data securely while providing an efficient and user-friendly interface for HR staff.",
+    solution:
+      "Implemented robust security measures including encryption and access controls. Designed an intuitive interface that simplifies complex HR tasks and improves overall efficiency.",
+  },
   {
     id: 8,
     title: "MebelShop - Furniture E-commerce Platform",
@@ -408,7 +408,7 @@ export const projects = [
       "Implemented Next.js Image optimization with lazy loading. Used modern image formats (WebP) and responsive images for different screen sizes.",
   },
   {
-    id: 9,
+    id: 8,
     title: "HooBank - Financial Services App",
     des: "A comprehensive financial services app designed to streamline banking operations and enhance user experience.",
     img: "/p6_final.svg",
