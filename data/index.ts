@@ -72,44 +72,6 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Sektor 21 - Roastery Coffee",
-    des: "A modern company profile website for a specialty coffee roastery, showcasing their story, roast beans, and coffee culture.",
-    img: "/p_sektor.svg",
-    iconLists: [
-      "/php.svg",
-      "/laravel.svg",
-      "/tail.svg",
-      "/mysql.svg",
-      "/livewire.svg",
-    ],
-    link: "https://companyprojectsector21.com",
-    slug: "sektor21-roastery-coffee",
-    category: "Company Profile",
-    year: "2026",
-    fullDescription:
-      "Sektor 21 is a specialty coffee roastery company profile website that brings the brand's story and passion for coffee to life online. The platform highlights their roasting process, signature blends, coffee menu, and the warm ambiance of the roastery — crafted to attract coffee enthusiasts and potential wholesale partners.",
-    features: [
-      "Elegant company profile website showcasing brand identity and story",
-      "Interactive coffee menu with product details and descriptions",
-      "Behind-the-scenes roasting process section",
-      "Gallery of roastery ambiance and coffee products",
-      "Contact form for wholesale and partnership inquiries",
-      "Fully responsive design optimized for all devices",
-    ],
-    technologies: [
-      { name: "PHP", icon: "/php.svg" },
-      { name: "Laravel", icon: "/laravel.svg" },
-      { name: "Tailwind CSS", icon: "/tail.svg" },
-      { name: "MySQL", icon: "/mysql.svg" },
-      { name: "Livewire", icon: "/livewire.svg" },
-    ],
-    challenges:
-      "Translating the warm, artisanal identity of a specialty coffee roastery into a compelling digital experience while keeping the website fast and visually rich.",
-    solution:
-      "Designed a visually immersive layout using Tailwind CSS with custom typography and earthy color palettes. Used Livewire for smooth dynamic interactions and Laravel for managing content and contact form submissions efficiently.",
-  },
-  {
-    id: 2,
     title: "Stiego - Online Fashion Store",
     des: "An e-commerce platform offering a seamless shopping experience for fashion enthusiasts.",
     img: "/p1_final.svg",
@@ -147,7 +109,85 @@ export const projects = [
       "Implemented Laravel's built-in caching mechanisms and optimized database queries. Used Livewire for dynamic interactions without page reloads.",
   },
   {
+    id: 2,
+    title: "Sektor 21 - Roastery Coffee",
+    des: "A modern company profile website for a specialty coffee roastery, showcasing their story, roast beans, and coffee culture.",
+    img: "/p_sektor.svg",
+    iconLists: [
+      "/php.svg",
+      "/laravel.svg",
+      "/tail.svg",
+      "/mysql.svg",
+      "/livewire.svg",
+    ],
+    link: "https://companyprojectsector21.com",
+    slug: "sektor21-roastery-coffee",
+    category: "Company Profile",
+    year: "2026",
+    fullDescription:
+      "Sektor 21 is a specialty coffee roastery company profile website that brings the brand's story and passion for coffee to life online. The platform highlights their roasting process, signature blends, coffee menu, and the warm ambiance of the roastery — crafted to attract coffee enthusiasts and potential wholesale partners.",
+    features: [
+      "Elegant company profile website showcasing brand identity and story",
+      "Interactive coffee menu with product details and descriptions",
+      "Behind-the-scenes roasting process section",
+      "Gallery of roastery ambiance and coffee products",
+      "Contact form for wholesale and partnership inquiries",
+      "Fully responsive design optimized for all devices",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+    ],
+    challenges:
+      "Translating the warm, artisanal identity of a specialty coffee roastery into a compelling digital experience while keeping the website fast and visually rich.",
+    solution:
+      "Designed a visually immersive layout using Tailwind CSS with custom typography and earthy color palettes. Used Livewire for smooth dynamic interactions and Laravel for managing content and contact form submissions efficiently.",
+  },
+
+  {
     id: 3,
+    title: "JT Rental - Vehicle Rental Service",
+    des: "A modern vehicle rental platform that provides a seamless booking experience for customers.",
+    img: "/p1_final.svg",
+    iconLists: [
+      "/php.svg",
+      "/laravel.svg",
+      "/tail.svg",
+      "/mysql.svg",
+      "/livewire.svg",
+    ],
+    link: "https://jtrental.web.id",
+    slug: "jtrental-vehicle-rental",
+    category: "E-commerce",
+    year: "2025",
+    fullDescription:
+      "JT Rental is a comprehensive online vehicle rental platform that provides a seamless booking experience for customers. Built with modern web technologies, the platform offers a wide range of vehicles with an intuitive user interface.",
+    features: [
+      "User-friendly product catalog with advanced filtering",
+      "Secure payment gateway integration",
+      "Real-time inventory management",
+      "Order booking system system",
+      "Reporting and analytics dashboard for rental management",
+      "Responsive design for all devices",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.svg" },
+      { name: "Laravel", icon: "/laravel.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "MySQL", icon: "/mysql.svg" },
+      { name: "Livewire", icon: "/livewire.svg" },
+    ],
+    challenges:
+      "Creating a scalable booking platform that handles high traffic while maintaining fast load times and secure transactions.",
+    solution:
+      "Implemented Laravel's built-in caching mechanisms and optimized database queries. Used Livewire for dynamic interactions without page reloads.",
+  },
+
+  {
+    id: 4,
     title: "Elysian - Hotel Booking Platform",
     des: "Simplify your hotel booking experience with Elysian. Seamlessly connect with hotels and guests.",
     img: "/p2_final.svg",
@@ -185,7 +225,7 @@ export const projects = [
       "Implemented database transactions with Prisma and used Next.js ISR for optimal performance. Added real-time validation and reservation locking mechanisms.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Soraview - Smart TV Application",
     des: "A smart TV application designed for hotels, providing guests with an interactive entertainment experience.",
     img: "/p3_final.svg",
@@ -223,7 +263,7 @@ export const projects = [
       "Developed a responsive interface optimized for TV screens with remote control navigation. Implemented a flexible architecture supporting multiple TV platforms.",
   },
   {
-    id: 5,
+    id: 6,
     title: "SN Cargo - Logistics Management System",
     des: "A comprehensive logistics management system designed to streamline operations and enhance efficiency.",
     img: "/p4_final.svg",
@@ -261,7 +301,7 @@ export const projects = [
       "Implemented event-driven architecture with real-time updates. Created automated workflows using Laravel queues and scheduled tasks.",
   },
   {
-    id: 6,
+    id: 7,
     title: "PPID - Poltekkes Kemenkes Surakarta",
     des: "A public information management system designed to facilitate transparency and efficient information dissemination.",
     img: "/p7_final.svg",
@@ -298,44 +338,44 @@ export const projects = [
     solution:
       "Implemented a robust request management system with automated workflows. Used Laravel's built-in security features to protect sensitive information and ensure compliance with data protection regulations.",
   },
-  {
-    id: 7,
-    title: "BKD Jateng - Employee Management System",
-    des: "An employee management system designed to streamline HR operations and enhance organizational efficiency.",
-    img: "/p8_final.svg",
-    iconLists: [
-      "/php.svg",
-      "/bootstrap.svg",
-      "/mysql.svg",
-      "/livewire.svg",
-      "/laravel.svg",
-    ],
-    link: "https://bkd.jatengprov.go.id",
-    slug: "bkd-jateng-employee-management",
-    category: "HR Management",
-    year: "2023",
-    fullDescription:
-      "The BKD Jateng Employee Management System is a comprehensive platform designed to streamline HR operations and enhance organizational efficiency. The system provides tools for employee data management, attendance tracking, and performance evaluation.",
-    features: [
-      "Employee database with detailed profiles",
-      "Attendance tracking and leave management",
-      "Performance evaluation and feedback system",
-      "Role-based access control for HR staff",
-      "Automated report generation for HR metrics",
-      "Integration with payroll and benefits systems",
-    ],
-    technologies: [
-      { name: "PHP", icon: "/php.svg" },
-      { name: "Bootstrap", icon: "/bootstrap.svg" },
-      { name: "MySQL", icon: "/mysql.svg" },
-      { name: "Livewire", icon: "/livewire.svg" },
-      { name: "Laravel", icon: "/laravel.svg" },
-    ],
-    challenges:
-      "Managing sensitive employee data securely while providing an efficient and user-friendly interface for HR staff.",
-    solution:
-      "Implemented robust security measures including encryption and access controls. Designed an intuitive interface that simplifies complex HR tasks and improves overall efficiency.",
-  },
+  // {
+  //   id: 7,
+  //   title: "BKD Jateng - Employee Management System",
+  //   des: "An employee management system designed to streamline HR operations and enhance organizational efficiency.",
+  //   img: "/p8_final.svg",
+  //   iconLists: [
+  //     "/php.svg",
+  //     "/bootstrap.svg",
+  //     "/mysql.svg",
+  //     "/livewire.svg",
+  //     "/laravel.svg",
+  //   ],
+  //   link: "https://bkd.jatengprov.go.id",
+  //   slug: "bkd-jateng-employee-management",
+  //   category: "HR Management",
+  //   year: "2023",
+  //   fullDescription:
+  //     "The BKD Jateng Employee Management System is a comprehensive platform designed to streamline HR operations and enhance organizational efficiency. The system provides tools for employee data management, attendance tracking, and performance evaluation.",
+  //   features: [
+  //     "Employee database with detailed profiles",
+  //     "Attendance tracking and leave management",
+  //     "Performance evaluation and feedback system",
+  //     "Role-based access control for HR staff",
+  //     "Automated report generation for HR metrics",
+  //     "Integration with payroll and benefits systems",
+  //   ],
+  //   technologies: [
+  //     { name: "PHP", icon: "/php.svg" },
+  //     { name: "Bootstrap", icon: "/bootstrap.svg" },
+  //     { name: "MySQL", icon: "/mysql.svg" },
+  //     { name: "Livewire", icon: "/livewire.svg" },
+  //     { name: "Laravel", icon: "/laravel.svg" },
+  //   ],
+  //   challenges:
+  //     "Managing sensitive employee data securely while providing an efficient and user-friendly interface for HR staff.",
+  //   solution:
+  //     "Implemented robust security measures including encryption and access controls. Designed an intuitive interface that simplifies complex HR tasks and improves overall efficiency.",
+  // },
   {
     id: 8,
     title: "MebelShop - Furniture E-commerce Platform",
