@@ -172,11 +172,7 @@ export const BentoGridItem = ({
                   copied ? "block" : "hidden"
                 }`}
               >
-                {/* CSS-based confetti animation instead of Lottie */}
-                <div className="flex items-center justify-center h-[200px] w-[200px] text-center">
-                  <div className="text-3xl animate-bounce">🎉</div>
-                  <div className="text-3xl animate-bounce">🎊</div>
-                </div>
+                
               </div>
 
               <MagicButton

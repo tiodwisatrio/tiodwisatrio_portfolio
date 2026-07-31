@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const response = NextResponse.next();
 
   // Add compression headers
@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-// Only apply middleware to static assets
+// Only apply proxy to static assets
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

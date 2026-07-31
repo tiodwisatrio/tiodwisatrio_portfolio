@@ -17,7 +17,6 @@ const nextConfig = {
   },
 
   // CSS & JS optimization
-  swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },

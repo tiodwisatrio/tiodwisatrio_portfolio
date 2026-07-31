@@ -1,4 +1,5 @@
 "use client";
+import { use } from "react";
 import { projects, navItems } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,13 +10,14 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/Footer";
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default function ProjectDetail({ params }: ProjectPageProps) {
-  const project = projects.find((p: any) => p.slug === params.slug);
+  const { slug } = use(params);
+  const project = projects.find((p: any) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -204,7 +206,7 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
           <h2 className="text-3xl font-bold text-white mb-8">Other Projects</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {projects
-              .filter((p: any) => p.slug !== params.slug)
+              .filter((p: any) => p.slug !== slug)
               .slice(0, 3)
               .map((otherProject: any, index: number) => (
                 <motion.div

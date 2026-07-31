@@ -12,7 +12,10 @@ export function useIntersectionObserver({
   root = null,
   rootMargin = "0%",
   freezeOnceVisible = false,
-}: UseIntersectionObserverProps = {}): [React.RefObject<Element>, boolean] {
+}: UseIntersectionObserverProps = {}): [
+  React.RefObject<Element | null>,
+  boolean,
+] {
   const [isIntersecting, setIntersecting] = useState(false);
   const ref = useRef<Element>(null);
 

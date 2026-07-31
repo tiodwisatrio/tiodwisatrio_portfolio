@@ -32,6 +32,4 @@ Sentry.init({
       maxReplayDuration: 15 * 60 * 1000, // 15 minutes max
     }),
   ],
-  // Enable automatic instrumentation but reduce overhead
-  autoSessionTracking: isProduction,
 });
