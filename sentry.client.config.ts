@@ -15,21 +15,4 @@ Sentry.init({
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
-
-  // Reduce replay overhead
-  replaysOnErrorSampleRate: isProduction ? 0.5 : 0,
-
-  // This sets the sample rate to be 5% in production, disabled in dev
-  replaysSessionSampleRate: isProduction ? 0.05 : 0,
-
-  // You can remove this option if you're not planning to use the Sentry Session Replay feature:
-  integrations: [
-    Sentry.replayIntegration({
-      // Additional Replay configuration goes in here, for example:
-      maskAllText: true,
-      blockAllMedia: true,
-      // Reduce replay buffer size
-      maxReplayDuration: 15 * 60 * 1000, // 15 minutes max
-    }),
-  ],
 });

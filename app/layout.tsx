@@ -162,7 +162,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Tio Dwi Satrio - Web Development Services",
-    image: "https://tiodwisatrio.com/profile.svg",
+    image: "https://tiodwisatrio.com/profile.webp",
     "@id": "https://tiodwisatrio.com",
     url: "https://tiodwisatrio.com",
     telephone: "+62-XXX-XXXX-XXXX", // Add your phone if you want
