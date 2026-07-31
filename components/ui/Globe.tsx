@@ -56,11 +56,13 @@ export type GlobeConfig = {
 interface WorldProps {
   globeConfig: GlobeConfig;
   data: Position[];
+  /** Stops the render loop while the globe is scrolled out of view. */
+  active?: boolean;
 }
 
 let numbersOfRings = [0];
 
-export function Globe({ globeConfig, data }: WorldProps) {
+export function Globe({ globeConfig, data, active = true }: WorldProps) {
   const [globeData, setGlobeData] = useState<
     | {
         size: number;
@@ -152,7 +154,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (globeRef.current && globeData) {
       globeRef.current
         .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
+        // Resolution 3 tessellates ~7x more H3 cells than 2 for a barely
+        // visible gain at this globe size, at a large main-thread cost.
+        .hexPolygonResolution(2)
         .hexPolygonMargin(0.7)
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
@@ -203,7 +207,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (!globeRef.current || !globeData) return;
+    if (!globeRef.current || !globeData || !active) return;
 
     const interval = setInterval(() => {
       if (!globeRef.current || !globeData) return;
@@ -221,7 +225,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData]);
+  }, [globeRef.current, globeData, active]);
 
   return (
     <>
@@ -230,12 +234,28 @@ export function Globe({ globeConfig, data }: WorldProps) {
   );
 }
 
+// The canvas runs in "demand" mode, so nothing is drawn until something asks
+// for it. Pacing those requests caps the globe at a fixed frame rate and
+// leaves the main thread idle in between, instead of drawing flat out.
+function FrameLimiter({ fps = 30 }: { fps?: number }) {
+  const invalidate = useThree((state) => state.invalidate);
+
+  useEffect(() => {
+    const interval = setInterval(() => invalidate(), 1000 / fps);
+    return () => clearInterval(interval);
+  }, [invalidate, fps]);
+
+  return null;
+}
+
 export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      gl.setPixelRatio(window.devicePixelRatio);
+      // A retina ratio of 2 quadruples the pixels rastered every frame for a
+      // globe this small; 1.5 is the point where the extra cost stops showing.
+      gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     }
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
@@ -245,11 +265,17 @@ export function WebGLRendererConfig() {
 }
 
 export function World(props: WorldProps) {
-  const { globeConfig } = props;
+  const { globeConfig, active = true } = props;
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+    <Canvas
+      scene={scene}
+      camera={new PerspectiveCamera(50, aspect, 180, 1800)}
+      frameloop={active ? "demand" : "never"}
+      dpr={[1, 1.5]}
+    >
+      {active && <FrameLimiter fps={30} />}
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
@@ -272,7 +298,7 @@ export function World(props: WorldProps) {
         minDistance={cameraZ}
         maxDistance={cameraZ}
         autoRotateSpeed={1}
-        autoRotate={true}
+        autoRotate={false}
         minPolarAngle={Math.PI / 3.5}
         maxPolarAngle={Math.PI - Math.PI / 3}
       />

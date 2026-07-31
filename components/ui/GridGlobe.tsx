@@ -8,6 +8,29 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
 });
 
+// three.js plus the hex tessellation costs several seconds of main thread.
+// Hold it back until the browser reports idle so it never competes with
+// hydration or the LCP paint.
+function useIdle(active: boolean) {
+  const [idle, setIdle] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!active || idle) return;
+
+    if (typeof window.requestIdleCallback !== "function") {
+      const timer = window.setTimeout(() => setIdle(true), 1500);
+      return () => window.clearTimeout(timer);
+    }
+
+    const handle = window.requestIdleCallback(() => setIdle(true), {
+      timeout: 3000,
+    });
+    return () => window.cancelIdleCallback(handle);
+  }, [active, idle]);
+
+  return idle;
+}
+
 const GridGlobe = () => {
   const globeConfig = {
     pointSize: 4,
@@ -395,10 +418,17 @@ const GridGlobe = () => {
     },
   ];
 
+  // Tracked continuously, not frozen: it both gates the initial mount and
+  // parks the render loop again once the globe scrolls away.
   const [containerRef, isVisible] = useIntersectionObserver({
     rootMargin: "300px",
-    freezeOnceVisible: true,
   });
+  const [wasVisible, setWasVisible] = React.useState(false);
+  React.useEffect(() => {
+    if (isVisible) setWasVisible(true);
+  }, [isVisible]);
+
+  const shouldRender = useIdle(wasVisible);
 
   return (
     // remove dark:bg-black bg-white h-screen md:h-auto  w-full flex-row py-20
@@ -435,7 +465,13 @@ const GridGlobe = () => {
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
         {/* remove -bottom-20 */}
         <div className="absolute w-full h-72 md:h-full z-10">
-          {isVisible && <World data={sampleArcs} globeConfig={globeConfig} />}
+          {shouldRender && (
+            <World
+              data={sampleArcs}
+              globeConfig={globeConfig}
+              active={isVisible}
+            />
+          )}
         </div>
       </div>
     </div>
