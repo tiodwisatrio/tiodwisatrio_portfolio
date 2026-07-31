@@ -1,10 +1,12 @@
 "use client";
-import { projects } from "@/data";
+import { projects, navItems } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLocationArrow, FaArrowLeft } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { notFound } from "next/navigation";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import Footer from "@/components/Footer";
 
 interface ProjectPageProps {
   params: {
@@ -19,8 +21,14 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
     notFound();
   }
 
+  const homeNavItems = navItems.map((item) => ({
+    ...item,
+    link: `/${item.link}`,
+  }));
+
   return (
     <div className="min-h-screen bg-black-100 py-20">
+      <FloatingNav navItems={homeNavItems} />
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Back button */}
         <motion.div
@@ -79,7 +87,7 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
             src={project.img}
             alt={project.title}
             fill
-            className="object-contain z-10"
+            className="object-cover z-10"
           />
         </motion.div>
 
@@ -174,7 +182,7 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-gradient-to-r from-purple to-purple/80 rounded-2xl p-6 text-center hover:shadow-lg hover:shadow-purple/50 transition-all duration-300"
+              className="block bg-gradient-to-br from-blue-900 via-indigo-700 to-purple-600 rounded-2xl p-6 text-center transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -223,7 +231,7 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
                           src={otherProject.img}
                           alt={otherProject.title}
                           fill
-                          className="object-contain z-10 p-4 group-hover:scale-105 transition-transform duration-300"
+                          className="object-cover object-top z-10 group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                       <div className="p-6">
@@ -240,6 +248,8 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
               ))}
           </div>
         </motion.div>
+
+        <Footer />
       </div>
     </div>
   );

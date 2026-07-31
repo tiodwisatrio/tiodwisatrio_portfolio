@@ -377,7 +377,7 @@ export const projects = [
   //     "Implemented robust security measures including encryption and access controls. Designed an intuitive interface that simplifies complex HR tasks and improves overall efficiency.",
   // },
   {
-    id: 7,
+    id: 9,
     title: "MebelShop - Furniture E-commerce Platform",
     des: "A comprehensive furniture e-commerce platform designed to enhance the online shopping experience.",
     img: "/p5_final.svg",

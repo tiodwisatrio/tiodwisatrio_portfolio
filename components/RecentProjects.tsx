@@ -39,7 +39,7 @@ const RecentProjects = () => {
             >
               <PinContainer title={item.title} href={`/projects/${item.slug}`}>
                 {/* Card image */}
-                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 -mt-4">
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
@@ -56,9 +56,8 @@ const RecentProjects = () => {
                   <Image
                     src={item.img}
                     alt={`${item.title} project cover`}
-                    className="z-10 absolute bottom-0"
-                    width={400}
-                    height={300}
+                    fill
+                    className="z-10 object-cover object-top"
                     loading="lazy"
                   />
                 </div>
