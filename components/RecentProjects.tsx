@@ -37,7 +37,10 @@ const RecentProjects = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <PinContainer title={item.title} href={`/projects/${item.slug}`}>
+              <PinContainer
+                title={item.title.split(" - ")[0]}
+                href={`/projects/${item.slug}`}
+              >
                 {/* Card image */}
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 -mt-4">
                   <div
