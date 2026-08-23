@@ -24,7 +24,7 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mt-10 px-4 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-1 md:gap-y-16 mt-10 px-4 justify-items-center">
         {projects &&
           Array.isArray(projects) &&
           projects.length > 0 &&

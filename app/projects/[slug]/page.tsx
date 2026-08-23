@@ -69,7 +69,7 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
 
         {/* Project Image */}
         <motion.div
-          className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden mb-12"
+          className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden mb-12"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
