@@ -72,6 +72,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    type: 0,
     title: "Stiego - Online Fashion Store",
     des: "An e-commerce platform offering a seamless shopping experience for fashion enthusiasts.",
     img: "/p1_final.webp",
@@ -110,6 +111,7 @@ export const projects = [
   },
   {
     id: 2,
+    type: 0,
     title: "Sektor 21 - Roastery Coffee",
     des: "A modern company profile website for a specialty coffee roastery, showcasing their story, roast beans, and coffee culture.",
     img: "/p_sektor.webp",
@@ -149,6 +151,7 @@ export const projects = [
 
   {
     id: 3,
+    type: 0,
     title: "Youtravel - Travel & Tour Booking Platform",
     des: "A budget-friendly travel agency platform offering curated tour packages and backpacking experiences across Indonesia.",
     img: "/p9_final.webp",
@@ -188,6 +191,7 @@ export const projects = [
 
   {
     id: 4,
+    type: 0,
     title: "Elysian - Hotel Booking Platform",
     des: "Simplify your hotel booking experience with Elysian. Seamlessly connect with hotels and guests.",
     img: "/p2_final.webp",
@@ -226,6 +230,7 @@ export const projects = [
   },
   {
     id: 5,
+    type: 0,
     title: "Smoothic - Aesthetic Clinic Platform",
     des: "A premium Korean-inspired aesthetic clinic website featuring treatment services, a skincare shop, and online booking.",
     img: "/p10_final.webp",
@@ -264,6 +269,7 @@ export const projects = [
   },
   {
     id: 6,
+    type: 0,
     title: "JT Rental - Vehicle Rental Service",
     des: "A modern vehicle rental platform that provides a seamless booking experience for customers.",
     img: "/p_jogjatrip.webp",
@@ -302,6 +308,7 @@ export const projects = [
   },
   {
     id: 7,
+    type: 1,
     title: "Soraview - Smart TV Application",
     des: "A smart TV application designed for hotels, providing guests with an interactive entertainment experience.",
     img: "/p3_final.webp",
@@ -340,6 +347,7 @@ export const projects = [
   },
   {
     id: 8,
+    type: 1,
     title: "SN Cargo - Logistics Management System",
     des: "A freight forwarding company website covering domestic and international cargo shipping with an online tracking portal.",
     img: "/p4_final.webp",
@@ -378,6 +386,7 @@ export const projects = [
   },
   {
     id: 9,
+    type: 1,
     title: "PPID - Poltekkes Kemenkes Surakarta",
     des: "A public information management system designed to facilitate transparency and efficient information dissemination.",
     img: "/p7_final.webp",

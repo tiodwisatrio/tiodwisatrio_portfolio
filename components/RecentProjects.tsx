@@ -63,6 +63,18 @@ const RecentProjects = () => {
                     className="z-10 object-cover object-top"
                     loading="lazy"
                   />
+
+                  {item.type === 1 && (
+                    <span
+                      className="absolute top-3 left-3 z-20 rounded-full px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-xl border border-white/40"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.4) 100%)",
+                      }}
+                    >
+                      Office
+                    </span>
+                  )}
                 </div>
 
                 {/* Title */}
