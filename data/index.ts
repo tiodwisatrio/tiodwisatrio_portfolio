@@ -463,6 +463,38 @@ export const projects = [
   // },
   {
     id: 10,
+    type: 1,
+    title: "Inti Mulia Cahaya - Seafood Export Company Profile",
+    des: "A corporate profile website for a seafood export company, showcasing its product lines, operational infrastructure, and international export reach.",
+    img: "/p_inti.webp",
+    iconLists: ["/php.webp", "/laravel.svg", "/tail.svg", "/mysql.webp"],
+    link: "https://intimuliacahaya.co.id",
+    slug: "inti-mulia-cahaya-seafood-export",
+    category: "Company Profile",
+    year: "2025",
+    fullDescription:
+      "PT Inti Mulia Cahaya is an Indonesian seafood export company supplying fresh and live aquatic products to international markets. The website serves as the company's corporate profile and business development platform, presenting its product range, branch network, and export operations to connect with international importers.",
+    features: [
+      "Product showcase covering live lobster, grouper, mud crab, blood cockle, and fresh demersal, pelagic, and tuna fish",
+      "Company profile highlighting 10 branch locations across eastern Indonesia",
+      "Overview of cold storage, processing facilities, and HACCP-certified operations",
+      "Export information covering shipments to 7+ countries including China and Taiwan",
+      "Contact section for international importer inquiries",
+      "Fully responsive design for desktop and mobile visitors",
+    ],
+    technologies: [
+      { name: "PHP", icon: "/php.webp" },
+      { name: "Laravel", icon: "/laravel.svg" },
+      { name: "Tailwind CSS", icon: "/tail.svg" },
+      { name: "MySQL", icon: "/mysql.webp" },
+    ],
+    challenges:
+      "Presenting a wide range of seafood products and export credentials in a way that builds trust with international B2B buyers unfamiliar with the company.",
+    solution:
+      "Built a structured company profile with Laravel and a clean Tailwind CSS layout, organizing products, certifications, and branch coverage into clear sections that establish credibility for export partners.",
+  },
+  {
+    id: 11,
     title: "MebelShop - Furniture E-commerce Platform",
     des: "A comprehensive furniture e-commerce platform designed to enhance the online shopping experience.",
     img: "/p5_final.webp",
@@ -493,7 +525,7 @@ export const projects = [
       "Implemented Next.js Image optimization with lazy loading. Used modern image formats (WebP) and responsive images for different screen sizes.",
   },
   {
-    id: 11,
+    id: 12,
     title: "HooBank - Fintech Landing Page",
     des: "A modern marketing landing page for a fintech product, highlighting its value proposition, features, and social proof.",
     img: "/p6_final.webp",
