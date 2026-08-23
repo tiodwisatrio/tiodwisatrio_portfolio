@@ -13,7 +13,7 @@ export default function NotFound() {
           Sorry, the project you&apos;re looking for doesn&apos;t exist.
         </p>
         <Link
-          href="/#projects"
+          href="/projects"
           className="inline-flex items-center gap-2 px-6 py-3 bg-purple hover:bg-purple/80 text-white rounded-lg transition-colors"
         >
           <FaArrowLeft />

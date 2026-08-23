@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Hero = memo(() => {
   return (
-    <div className="pt-24">
+    <div className="pt-24" id="home">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -43,7 +43,16 @@ const Hero = memo(() => {
             actually work, from front-end details to back-end logic.
           </p>
 
-          <a href="#projects">
+          <a
+            href="/projects"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              window.history.pushState(null, "", "/projects");
+            }}
+          >
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}

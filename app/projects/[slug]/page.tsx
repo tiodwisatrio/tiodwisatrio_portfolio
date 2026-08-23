@@ -23,14 +23,9 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const homeNavItems = navItems.map((item) => ({
-    ...item,
-    link: `/${item.link}`,
-  }));
-
   return (
     <div className="min-h-screen bg-black-100 py-20">
-      <FloatingNav navItems={homeNavItems} />
+      <FloatingNav navItems={navItems} />
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Back button */}
         <motion.div
@@ -39,7 +34,7 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
           transition={{ duration: 0.5 }}
         >
           <Link
-            href="/#projects"
+            href="/projects"
             className="inline-flex items-center gap-2 text-purple hover:text-purple/80 transition-colors mb-8"
           >
             <FaArrowLeft />
